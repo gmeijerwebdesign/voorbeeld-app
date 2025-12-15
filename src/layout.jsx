@@ -7,7 +7,7 @@ function Layout({ children }) {
     <div className="min-h-screen ">
       <Topper />
       <Header />
-      <main className="max-w-7xl mx-auto px-6 py-6">{children}</main>
+      <main>{children}</main>
     </div>
   );
 }

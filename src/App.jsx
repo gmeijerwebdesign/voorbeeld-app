@@ -1,10 +1,11 @@
+import Banner from "./components/banner";
 import Layout from "./layout";
 
 function App() {
   return (
     <>
       <Layout>
-        <h1 className="text-red-500">Hello,world</h1>
+        <Banner />
       </Layout>
     </>
   );
