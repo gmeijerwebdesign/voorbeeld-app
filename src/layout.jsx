@@ -1,6 +1,7 @@
 import React from "react";
 import Topper from "./components/topper";
 import Header from "./components/header";
+import Footer from "./components/footer";
 
 function Layout({ children }) {
   return (
@@ -8,6 +9,7 @@ function Layout({ children }) {
       <Topper />
       <Header />
       <main>{children}</main>
+      <Footer />
     </div>
   );
 }
