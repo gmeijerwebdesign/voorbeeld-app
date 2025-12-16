@@ -11,7 +11,7 @@ const jobsRight = ["TEST", "TEST-/TESTTEST", "TESTTESTETETSTEST"];
 
 function CallToAction() {
   return (
-    <div className="bg-gray-900 text-white py-16 px-6 ">
+    <div className=" bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-16 px-6 ">
       <div className=" max-w-7xl mx-auto px-4 ">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">

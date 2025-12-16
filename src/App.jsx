@@ -4,6 +4,7 @@ import Layout from "./layout";
 import Banner from "./components/banner";
 import CallToAction from "./components/calltoaction";
 import Vacatures from "./posts";
+import SinglePost from "./components/single-post";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             }
           />
           <Route path="/vacatures" element={<Vacatures />} />
+          <Route path="/single-vacature" element={<SinglePost />} />
         </Routes>
       </Layout>
     </Router>
