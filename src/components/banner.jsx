@@ -10,26 +10,26 @@ function Banner() {
       style={{ backgroundImage: `url(${gif})` }}
     >
       <div className="absolute inset-0 bg-black/60"></div>
-      <div className="relative max-w-7xl mx-auto px-6 top-25">
-        <h1 className="text-purple-500 text-5xl font-extrabold uppercase">
+      <div className="relative sm:max-w-7xl sm:mx-auto px-4 sm:px-6 top-10 sm:top-25">
+        <h1 className="text-purple-500 text-2xl sm:text-5xl font-extrabold uppercase">
           Uitdagende banen in de IT-
           <br /> en Software Development
         </h1>
 
-        <div className="py-6 flex gap-2">
-          <select className="border rounded px-2 w-55 py-2 bg-white outline-none">
+        <div className="py-6 flex flex-col  sm:flex-row gap-2">
+          <select className="border rounded px-2 sm:w-55 py-4 bg-white outline-none">
             <option value="all">Functienaam</option>
             <option value="fullstack">Fullstack Developer</option>
             <option value="frontend">Frontend Developer</option>
             <option value="backend">Backend Developer</option>
           </select>
-          <select className="border rounded px-2 w-55 py-2 bg-white outline-none">
+          <select className="border rounded px-2 sm:w-55 py-4 bg-white outline-none">
             <option value="all">Dienstverband</option>
             <option value="full">Fulltime</option>
             <option value="part">Parttime</option>
             <option value="bij">Bijbaan</option>
           </select>
-          <select className="border rounded px-2 py-1 bg-white outline-none">
+          <select className="border rounded px-2 py-4 w-20 bg-white outline-none">
             <option value="2">2 km</option>
             <option value="5">5 km</option>
             <option value="10">10 km</option>
@@ -41,25 +41,25 @@ function Banner() {
           </button>
         </div>
 
-        <div className="text-white flex gap-2">
-          <div className="flex flex-col">
+        <div className="text-white flex flex-col sm:flex-row gap-2 text-[12px]">
+          <div className="flex flex-col ">
             <p className="flex items-center gap-1 font-semibold">
-              <FaPlus className="text-sm text-purple-500" />
+              <FaPlus className=" text-purple-500" />
               Oplossing op maat voor jouw project
             </p>
             <p className="flex items-center gap-1 font-semibold">
-              <FaPlus className="text-sm text-purple-500" />
+              <FaPlus className=" text-purple-500" />
               Expertise in moderne technologieën
             </p>
           </div>
           <div>
             <p className="flex items-center gap-1 font-semibold">
-              <FaPlus className="text-sm text-purple-500" />
+              <FaPlus className=" text-purple-500" />
               Schaalbare en onderhoudbare code
             </p>
             <p className="flex items-center gap-1 font-semibold">
-              <FaPlus className="text-sm text-purple-500" />
-              Samenwerking aan langdurige projecten
+              <FaPlus className=" text-purple-500" />
+              Samenwerking aan langdurige project
             </p>
           </div>
         </div>

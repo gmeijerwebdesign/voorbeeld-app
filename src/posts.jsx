@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaCircle, FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const functiegroepen = [
-  "Procesoperator",
-  "Machine operator",
-  "Productiemedewerker",
-  "Magazijn-/heftruckwerk",
-  "Monteur",
-  "Leidinggevende",
+  "Fullstack Developer",
+  "Frontend Developer",
+  "Backend Developer",
 ];
 
 const vacatures = [
@@ -33,8 +30,6 @@ const vacatures = [
 ];
 
 function Vacatures() {
-  const [searchJob, setSearchJob] = useState("");
-  const [postcode, setPostcode] = useState("");
   const [distance, setDistance] = useState("20km");
 
   return (
@@ -44,9 +39,9 @@ function Vacatures() {
         style={{ backgroundImage: "url('/path-to-your-image.jpg')" }}
       ></div>
 
-      <div className="relative max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-4 gap-8">
+      <div className="relative sm:max-w-7xl sm:mx-auto px-4 sm:px-6 py-6 sm:py-16 grid grid-cols-1 lg:grid-cols-4 gap-8">
         <div className="space-y-6 text-gray-800">
-          <h2 className="text-purple-500 font-bold text-xl">VIND JOUW BAAN</h2>
+          <h2 className="text-purple-500 font-bold text-2xl">VIND JOUW BAAN</h2>
           <select className="border rounded px-2 w-55 py-2 bg-white outline-none">
             <option value="all">Functienaam</option>
             <option value="fullstack">Fullstack Developer</option>
@@ -71,9 +66,14 @@ function Vacatures() {
 
           {/* Functiegroepen */}
           <div className="text-white">
-            <h3 className="text-purple-500 font-bold mb-2">FUNCTIEGROEP</h3>
+            <h3 className="text-purple-500 font-bold mb-2 text-2xl">
+              FUNCTIEGROEP
+            </h3>
             {functiegroepen.map((group) => (
-              <label key={group} className="flex items-center gap-2 mb-1">
+              <label
+                key={group}
+                className="flex items-center gap-2 mb-1 text-sm"
+              >
                 <input type="checkbox" className="accent-purple-500" />
                 <span>{group}</span>
               </label>
@@ -93,20 +93,36 @@ function Vacatures() {
           {vacatures.map((job, idx) => (
             <div
               key={idx}
-              className="bg-gray-800 p-6 rounded-lg relative overflow-hidden"
+              className="bg-gray-800 p-4 sm:p-6 rounded-lg relative overflow-hidden text-sm"
             >
               <Link to="/single-vacature">
                 <div className="absolute top-0 left-0 bg-purple-500 px-3 py-1 rounded-tr-lg font-bold">
                   VACATURE
                 </div>
-                <h3 className="text-purple-500 font-bold text-xl mt-4">
+                <h3 className="text-purple-500 font-bold text-md text-xl mt-4">
                   {job.title}
                 </h3>
-                <div className="flex gap-4 text-gray-300 mt-2 mb-4">
-                  <span>{job.location}</span>
-                  <span>{job.shift}</span>
-                  <span>{job.group}</span>
-                  <span>{job.salary}</span>
+                <div className="flex flex-col sm:flex-row gap-4 text-gray-300 mt-2 mb-4">
+                  <span className="font-extrabold flex items-center gap-2">
+                    <FaCircle className="text-[8px] text-purple-500" />
+                    {job.location}
+                  </span>
+                  <span className="hidden sm:flex">
+                    <span className="font-extrabold flex items-center gap-2">
+                      <FaCircle className="text-[8px] text-purple-500" />
+                      {job.shift}
+                    </span>
+                  </span>
+                  <span className="font-extrabold flex items-center gap-2">
+                    <FaCircle className="text-[8px] text-purple-500" />
+                    {job.group}
+                  </span>
+                  <span className="hidden sm:flex">
+                    <span className="font-extrabold flex items-center gap-2">
+                      <FaCircle className="text-[8px] text-purple-500" />
+                      {job.salary}
+                    </span>
+                  </span>
                 </div>
                 <p className="text-gray-200">{job.description}</p>
               </Link>

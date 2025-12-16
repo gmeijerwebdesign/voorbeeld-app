@@ -4,23 +4,23 @@ import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 function Header() {
-  const pClass = "flex text-xl relative cursor-pointer";
+  const pClass = "flex text-[17px] relative cursor-pointer";
   const iconClass = "relative top-2 text-purple-500 font-bold";
 
   const [hovered, setHovered] = useState(null);
 
   return (
-    <div className="bg-linear-to-r from-black to-slate-800 shadow-2xl tracking-tighter">
+    <div className="bg-black sm:bg-linear-to-r from-black to-slate-800 shadow-2xl tracking-tighter">
       <div className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex justify-between text-white items-center">
-          <h1 className="flex items-center text-4xl  gap-3 font-extrabold">
+          <h1 className="flex items-center text-3xl sm:text-4xl  gap-3 font-extrabold">
             <CgDice5 className="text-purple-500" />
             <Link to="/">
               Dev<span className="italic">Bridge</span>
             </Link>
           </h1>
 
-          <div className="flex items-center gap-4 relative text-sm">
+          <div className="hidden sm:flex items-center gap-4 relative text-xs">
             <div
               className="relative"
               onMouseEnter={() => setHovered("werk")}

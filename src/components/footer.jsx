@@ -33,10 +33,10 @@ function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="sm:max-w-7xl sm:mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
           <h4 className="text-purple-500 font-bold mb-4">FUNCTIEGROEPEN</h4>
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-sm">
             {functiegroepen.map((job) => (
               <li key={job}>{job}</li>
             ))}
@@ -45,7 +45,7 @@ function Footer() {
 
         <div>
           <h4 className="text-purple-500 font-bold mb-4">VESTIGINGEN</h4>
-          <ul className="space-y-2">
+          <ul className="space-y-2 text-sm">
             {vestigingen.map((locatie) => (
               <li key={locatie}>{locatie}</li>
             ))}
@@ -56,12 +56,12 @@ function Footer() {
           <h4 className="text-purple-500 font-bold mb-4">
             ALTIJD OP DE HOOGTE
           </h4>
-          <ul className="space-y-2 mb-4">
+          <ul className="space-y-2 mb-4 text-sm">
             {newsletterLinks.map((link) => (
               <li key={link}>{link}</li>
             ))}
           </ul>
-          <div className="flex gap-2">
+          <div className="flex gap-2 text-sm">
             <a
               href="#"
               className="p-2 bg-gray-800 rounded hover:bg-purple-500 transition"
@@ -91,7 +91,7 @@ function Footer() {
 
         <div>
           <h4 className="text-purple-500 font-bold mb-4">PROCESSJOBS</h4>
-          <ul className="space-y-2 mb-4">
+          <ul className="space-y-2 mb-4 text-sm">
             {processJobsLinks.map((link) => (
               <li key={link}>{link}</li>
             ))}

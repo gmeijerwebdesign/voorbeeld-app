@@ -11,14 +11,14 @@ const jobsRight = ["TEST", "TEST-/TESTTEST", "TESTTESTETETSTEST"];
 
 function CallToAction() {
   return (
-    <div className=" bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-16 px-6 ">
-      <div className=" max-w-7xl mx-auto px-4 ">
-        <div className="max-w-7xl mx-auto">
-          <div className="mb-12">
-            <h2 className="text-4xl font-bold text-purple-500 mb-4">
+    <div className=" bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-16 px-4 ">
+      <div className=" sm:max-w-7xl sm:mx-auto px-2 sm:px-4 ">
+        <div className="sm:max-w-7xl sm:mx-auto">
+          <div className="mb-12 text-sm">
+            <h2 className="text-2xl sm:text-4xl font-bold text-purple-500 mb-4">
               WIJ ZORGEN VOOR DE JUISTE MATCH!
             </h2>
-            <p className="mb-4 text-gray-200 max-w-152.5">
+            <p className="mb-4 text-gray-200 sm:max-w-152.5">
               Een nieuwe baan vinden in de techwereld is niet moeilijk. Maar hoe
               zorg je voor een échte klik tussen jou en je toekomstige
               werkgever? Bij ProcessJobs geloven we in het zorgvuldig koppelen
@@ -30,7 +30,7 @@ function CallToAction() {
               écht bij je past – uitdagend, leerzaam en op maat voor jouw
               skills.
             </p>
-            <p className="mb-6 text-gray-200 max-w-152.5">
+            <p className="mb-6 text-gray-200 sm:max-w-152.5">
               Met onze kennis van alle facetten binnen de proces- en
               maakindustrie kunnen wij uitstekend inschatten of we de juiste
               match kunnen maken. Dit, zodat jij een baan krijgt die je verdient
@@ -51,7 +51,7 @@ function CallToAction() {
                 {jobsLeft.map((job) => (
                   <div
                     key={job}
-                    className="flex justify-between items-center border-b border-gray-700 py-2 cursor-pointer hover:text-purple-500 transition"
+                    className="flex text-sm justify-between items-center border-b border-gray-700 py-2 cursor-pointer hover:text-purple-500 transition"
                   >
                     <Link to="/vacatures">
                       <span className="font-semibold">{job}</span>
@@ -60,11 +60,11 @@ function CallToAction() {
                   </div>
                 ))}
               </div>
-              <div className="space-y-3">
+              <div className="space-y-3 text-sm">
                 {jobsRight.map((job) => (
                   <div
                     key={job}
-                    className="flex justify-between items-center border-b border-gray-700 py-2 cursor-pointer hover:text-purple-500 transition"
+                    className="flex lowercase text-sm justify-between items-center border-b border-gray-700 py-2 cursor-pointer hover:text-purple-500 transition"
                   >
                     <Link to="/vacatures">
                       <span className="font-semibold">{job}</span>
@@ -75,7 +75,7 @@ function CallToAction() {
               </div>
             </div>
             <div className="mt-4">
-              <a href="#" className="text-purple-500 hover:underline">
+              <a href="#" className="text-purple-500 hover:underline text-xs">
                 Meer functies
               </a>
             </div>
