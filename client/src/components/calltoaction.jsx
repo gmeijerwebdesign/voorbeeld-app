@@ -41,7 +41,6 @@ function CallToAction() {
             </button>
           </div>
 
-          {/* Vacatures per functie */}
           <div>
             <h3 className="text-2xl font-bold text-purple-500 mb-6">
               VACATURES PER FUNCTIE

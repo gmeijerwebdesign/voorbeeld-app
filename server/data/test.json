@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Fullstack Developer",
+    "location": "Amsterdam",
+    "shift": "Dagdienst",
+    "group": "Development",
+    "salary": "€4000 - 5500 bruto p.m.",
+    "description": "Werk aan moderne webapplicaties met een mix van frontend en backend technologieën zoals React en Node.js."
+  },
+  {
+    "id": 2,
+    "title": "Frontend Developer",
+    "location": "Rotterdam",
+    "shift": "Dagdienst",
+    "group": "Development",
+    "salary": "€3500 - 5000 bruto p.m.",
+    "description": "Ontwikkel gebruiksvriendelijke en interactieve user interfaces met React en TypeScript."
+  },
+  {
+    "id": 3,
+    "title": "Backend Developer",
+    "location": "Utrecht",
+    "shift": "Dagdienst",
+    "group": "Development",
+    "salary": "€3800 - 5200 bruto p.m.",
+    "description": "Bouw en onderhoud schaalbare API's en databases met Node.js, Express en PostgreSQL."
+  }
+]

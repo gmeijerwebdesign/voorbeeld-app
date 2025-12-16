@@ -1,36 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaCircle, FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 const functiegroepen = [
   "Fullstack Developer",
   "Frontend Developer",
   "Backend Developer",
 ];
 
-const vacatures = [
-  {
-    title: "Teamleider Voedingsmiddelenindustrie",
-    location: "'s-Hertogenbosch",
-    shift: "Dagdienst",
-    group: "Leidinggevende",
-    salary: "€3500 - 4400 bruto p.m.",
-    description:
-      "Ben jij een motiverende leider die energie krijgt van een dynamische productieomgeving? ...",
-  },
-  {
-    title: "Machine Operator 2-Ploegendienst",
-    location: "Aalst",
-    shift: "2 ploegendienst",
-    group: "Machine operator",
-    salary: "€3160 - 3611 bruto p.m.",
-    description:
-      "Wil jij aan de slag als Procesoperator bij een traditionele, oer-Hollandse fabriek? ...",
-  },
-];
-
 function Vacatures() {
   const [distance, setDistance] = useState("20km");
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await axios.get("http://localhost:3000/data/test");
+
+        console.log(res);
+        setData(res.data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+  }, []);
 
   return (
     <div className=" bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen relative">
@@ -63,8 +57,6 @@ function Vacatures() {
             <option value="20km">20km</option>
             <option value="30km">30km</option>
           </select>
-
-          {/* Functiegroepen */}
           <div className="text-white">
             <h3 className="text-purple-500 font-bold mb-2 text-2xl">
               FUNCTIEGROEP
@@ -81,21 +73,20 @@ function Vacatures() {
           </div>
         </div>
 
-        {/* Vacatures list */}
         <div className="lg:col-span-3 space-y-6">
           <div className="flex justify-between items-center mb-4">
-            <span>{vacatures.length} vacatures</span>
+            <span>{data.length} vacatures</span>
             <select className="p-2 rounded text-white">
               <option>Sorteren op</option>
             </select>
           </div>
 
-          {vacatures.map((job, idx) => (
+          {data.map((job, idx) => (
             <div
               key={idx}
               className="bg-gray-800 p-4 sm:p-6 rounded-lg relative overflow-hidden text-sm"
             >
-              <Link to="/single-vacature">
+              <Link to={`/single-vacature/${job.id}`}>
                 <div className="absolute top-0 left-0 bg-purple-500 px-3 py-1 rounded-tr-lg font-bold">
                   VACATURE
                 </div>

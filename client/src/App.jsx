@@ -21,7 +21,7 @@ function App() {
             }
           />
           <Route path="/vacatures" element={<Vacatures />} />
-          <Route path="/single-vacature" element={<SinglePost />} />
+          <Route path="/single-vacature/:id" element={<SinglePost />} />
         </Routes>
       </Layout>
     </Router>
